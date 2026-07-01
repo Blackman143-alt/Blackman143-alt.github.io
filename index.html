@@ -5,44 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jio Stream</title>
     <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            font-size: 13px; 
-            background: #ffffff; 
-            color: #000000; 
-            margin: 4px; 
-            padding: 0;
-        }
-        h3 { 
-            margin: 4px 0; 
-            font-size: 15px; 
-            color: #0056b3; 
-        }
-        input { 
-            width: 92%; 
-            padding: 5px; 
-            font-size: 13px; 
-            margin-bottom: 8px; 
-            border: 1px solid #777;
-        }
-        .item { 
-            border-bottom: 1px solid #ddd; 
-            padding: 6px 0; 
-        }
-        .title {
-            font-weight: bold;
-            display: block;
-            margin-bottom: 3px;
-        }
-        a { 
+        body { font-family: Arial, sans-serif; font-size: 13px; background: #ffffff; margin: 4px; padding: 0;}
+        h3 { margin: 4px 0; font-size: 15px; color: #0056b3; }
+        input { width: 92%; padding: 5px; font-size: 13px; margin-bottom: 8px; border: 1px solid #777;}
+        .item { border-bottom: 1px solid #ddd; padding: 8px 0; }
+        .title { font-weight: bold; display: block; margin-bottom: 5px; }
+        video { width: 100%; max-width: 176px; height: auto; background: #000; margin-top: 5px; display: block; }
+        .dl-btn { 
             display: inline-block; 
-            background: #0066cc; 
+            background: #28a745; 
             color: #ffffff; 
-            padding: 3px 8px; 
+            padding: 4px 8px; 
             text-decoration: none; 
             font-weight: bold; 
             font-size: 12px;
             border-radius: 2px;
+            margin-top: 6px;
         }
     </style>
 </head>
@@ -55,10 +33,18 @@
     <!-- Video List Container -->
     <div id="all-videos">
 
-        <!-- Your Video 1.mp4 Configuration -->
+        <!-- Pre-configured with your exact username and video details -->
         <div class="item" data-tags="physics class 11 chapter 1 units video one 1">
             <span class="title">Lecture 1</span>
-            <a href="https://raw.githubusercontent.com/Blackman143-alt/Blackman143-alt.github.io/main/1.mp4">▶ PLAY</a>
+            
+            <!-- Online Play Frame -->
+            <video controls preload="metadata">
+                <source src="https://raw.githubusercontent.com/Blackman143-alt/Blackman143-alt.github.io/main/1.mp4" type="video/mp4">
+                Playback not supported.
+            </video>
+
+            <!-- Download Button -->
+            <a class="dl-btn" href="https://raw.githubusercontent.com/Blackman143-alt/Blackman143-alt.github.io/main/1.mp4" download="1.mp4">📥 DOWNLOAD</a>
         </div>
 
     </div>
@@ -81,4 +67,3 @@
 
 </body>
 </html>
-
