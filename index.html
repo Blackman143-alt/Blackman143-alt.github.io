@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jio Stream</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            font-size: 13px; 
+            background: #ffffff; 
+            color: #000000; 
+            margin: 4px; 
+            padding: 0;
+        }
+        h3 { 
+            margin: 4px 0; 
+            font-size: 15px; 
+            color: #0056b3; 
+        }
+        input { 
+            width: 92%; 
+            padding: 5px; 
+            font-size: 13px; 
+            margin-bottom: 8px; 
+            border: 1px solid #777;
+        }
+        .item { 
+            border-bottom: 1px solid #ddd; 
+            padding: 6px 0; 
+        }
+        .title {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 3px;
+        }
+        a { 
+            display: inline-block; 
+            background: #0066cc; 
+            color: #ffffff; 
+            padding: 3px 8px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size: 12px;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <h3>Video Finder</h3>
+    <!-- Search Bar -->
+    <input type="text" id="search" onkeyup="matchVideo()" placeholder="Type keyword...">
+
+    <!-- Video List Container -->
+    <div id="all-videos">
+
+        <!-- Your Video 1.mp4 Configuration -->
+        <div class="item" data-tags="physics class 11 chapter 1 units video one 1">
+            <span class="title">Lecture 1</span>
+            <a href="https://raw.githubusercontent.com/Blackman143-alt/Blackman143-alt.github.io/main/1.mp4">▶ PLAY</a>
+        </div>
+
+    </div>
+
+    <!-- Live Search JavaScript Engine -->
+    <script>
+        function matchVideo() {
+            var text = document.getElementById('search').value.toLowerCase();
+            var boxes = document.getElementsByClassName('item');
+            for (var i = 0; i < boxes.length; i++) {
+                var match = boxes[i].getAttribute('data-tags');
+                if (match.indexOf(text) > -1) {
+                    boxes[i].style.display = "";
+                } else {
+                    boxes[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
+
