@@ -10,17 +10,16 @@
         input { width: 92%; padding: 5px; font-size: 13px; margin-bottom: 8px; border: 1px solid #777;}
         .item { border-bottom: 1px solid #ddd; padding: 8px 0; }
         .title { font-weight: bold; display: block; margin-bottom: 5px; }
-        video { width: 100%; max-width: 176px; height: auto; background: #000; margin-top: 5px; display: block; }
-        .dl-btn { 
+        .play-btn { 
             display: inline-block; 
-            background: #28a745; 
+            background: #0066cc; 
             color: #ffffff; 
-            padding: 4px 8px; 
+            padding: 5px 12px; 
             text-decoration: none; 
             font-weight: bold; 
-            font-size: 12px;
+            font-size: 13px;
             border-radius: 2px;
-            margin-top: 6px;
+            margin-top: 4px;
         }
     </style>
 </head>
@@ -33,18 +32,12 @@
     <!-- Video List Container -->
     <div id="all-videos">
 
-        <!-- Pre-configured with your exact username and video details -->
+        <!-- Pre-configured item optimized for Opera Mini data fetching -->
         <div class="item" data-tags="physics class 11 chapter 1 units video one 1">
             <span class="title">Lecture 1</span>
             
-            <!-- Online Play Frame -->
-            <video controls preload="metadata">
-                <source src="https://raw.githubusercontent.com/Blackman143-alt/Blackman143-alt.github.io/main/1.mp4" type="video/mp4">
-                Playback not supported.
-            </video>
-
-            <!-- Download Button -->
-            <a class="dl-btn" href="https://raw.githubusercontent.com/Blackman143-alt/Blackman143-alt.github.io/main/1.mp4" download="1.mp4">📥 DOWNLOAD</a>
+            <!-- Direct URL structure that prompts Opera Mini to stream via native player or download -->
+            <a class="play-btn" href="https://raw.githubusercontent.com/Blackman143-alt/Blackman143-alt.github.io/main/1.mp4">▶ LAUNCH VIDEO</a>
         </div>
 
     </div>
@@ -67,3 +60,4 @@
 
 </body>
 </html>
+
